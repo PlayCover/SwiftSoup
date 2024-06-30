@@ -1,4 +1,4 @@
-// swift-tools-version:5.7
+// swift-tools-version:5.0
 
 import PackageDescription
 
@@ -8,12 +8,7 @@ let package = Package(
         .library(name: "SwiftSoup", targets: ["SwiftSoup"])
     ],
     targets: [
-        .target(name: "SwiftSoup",
-                path: "Sources",
-                exclude: [],
-                resources: [.copy("PrivacyInfo.xcprivacy")]),
+        .target(name: "SwiftSoup", path: "Sources"),
         .testTarget(name: "SwiftSoupTests", dependencies: ["SwiftSoup"])
     ]
 )
-
-

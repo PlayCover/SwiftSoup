@@ -1226,9 +1226,9 @@ open class Element: Node {
         // selfclosing includes unknown tags, isEmpty defines tags that are always empty
         if (childNodes.isEmpty && _tag.isSelfClosing()) {
             if (out.syntax() == OutputSettings.Syntax.html && _tag.isEmpty()) {
-                accum.append(" />") // <img /> for "always empty" tags. selfclosing is ignored but retained for xml/xhtml compatibility
+                accum.append(">")
             } else {
-                accum.append(" />") // <img /> in xml
+                accum.append(" />") // <img> in html, <img /> in xml
             }
         } else {
             accum.append(">")

@@ -1097,8 +1097,7 @@ enum TokeniserState: TokeniserStateProtocol {
                 break
             case TokeniserStateVars.eof:
                 t.eofError(self)
-                // note: fall through to > case
-                fallthrough
+            // note: fall through to > case
             case ">": // catch invalid <!DOCTYPE>
                 t.error(self)
                 t.createDoctypePending()
